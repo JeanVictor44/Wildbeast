@@ -1,0 +1,42 @@
+body,
+ul,
+li,
+a,
+h1,
+p,
+blockquote{
+    margin:0;
+    padding:0;
+
+}
+html {
+    font-size: 62.5%;
+}
+ul {
+    list-style-type: none;
+}
+body {
+    font-size: 1.6rem;
+    font-family:"Vollkorn", Georgia, Serif;
+}
+a {
+    text-decoration:none;
+}
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    max-width:100%;
+    display:block;
+    border-radius:5px;
+}
+span {
+    display:block;
+}
+p {
+    font-size:1.8rem;
+    line-height:1.6;
+    color:#4F4F4F;
+}

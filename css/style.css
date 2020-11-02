@@ -1,0 +1,210 @@
+/* Estrutura */
+.structure {
+    display:grid;
+    grid-template-columns: minmax(160px,1fr) 3fr 300px;
+    grid-template-areas: "header header header"
+                         "sidenav content adverts"
+                         "footer footer footer";
+}
+@media (max-width:1200px) {
+    .structure {
+        grid-template-columns: minmax(160px,1fr) 3fr;
+        grid-template-areas:"header header"
+                            "sidenav content"
+                            "sidenav adverts"
+                            "footer footer";
+    }
+}
+/* Header */
+.header {
+    grid-area: header;
+    padding:25px;
+    display: grid;
+    grid-template-columns:1fr auto;
+    align-items:center;
+    background:linear-gradient(135deg,#8844ee,#b07dfb);
+}
+.logo {
+    max-width: 200px;
+}
+.header-navigation ul {
+    display:flex;
+    flex-wrap:wrap;
+}
+.header-navigation li+li {
+    margin-left:30px;
+}
+.header-navigation a {
+    display:block;
+    color: #fff;
+    background:rgba(0,0,0,0.1);
+    padding:8px;
+    border-radius:5px;
+    transition:0.1s;
+}
+.header-navigation a:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+
+
+
+
+/* Sidenav */
+
+.sidenav {
+    grid-area: sidenav;
+    background: #FAFBFC;
+    padding:30px;
+}
+
+/* Imagem dentro do a, mudar o a e não a imagem*/
+.sidenav li a {
+    display:block;
+    min-width:60px;
+    max-width: 140px;
+    background: #fff;
+    padding:20px;
+    border-radius:5px;
+    margin:0px auto 30px auto;
+    transition:0.1s ease-out;
+    box-shadow:5px 5px 15px 0px rgba(44,44,44,0.15);
+}
+.sidenav li a:hover {
+    background: #B07DFB;
+}
+
+
+
+
+/* Content */
+
+.content {
+    grid-area: content;
+    display:grid;
+    max-width: 900px;
+    grid-template-columns: repeat(2,1fr);
+    padding:30px;
+    grid-gap:30px;
+}
+.titulo {
+    color:#b07dfb;
+}
+.titulo h1 {
+    font-size:5.6rem;
+    font-weight: bold;
+    line-height: 1;
+}
+.titulo span {
+    font-size:1.6rem;
+    font-style:italic;
+}
+
+/* Card characteristcs */
+.characteristics{
+    display:flex;
+    align-items:flex-start;
+}
+.characteristics > div {
+    width:80px;
+    background:linear-gradient(135deg,#8844ee,#b07dfb);
+    border-radius:5px;
+    box-shadow:5px 5px 15px 0px rgba(44,44,44,0.15);
+    text-align:center;
+}
+.characteristics > div+div {
+    margin-left: 30px;
+}
+.characteristics span {
+    color:#b07dfb;
+}
+.number {
+    font-size:5rem;
+}
+.measure {
+    font-size:1.7rem;
+    background:#fff;
+    padding:3px 0px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.spotlight {
+    color:#B07DFB;
+    font-size:1.5rem;
+    max-width:245px;
+    line-height:1.5;
+}
+/* -1 = expansão total*/
+.col-wide {
+    grid-column: 1/-1;
+} 
+.image-1 {
+    grid-row:3/span 2;
+    align-self:end;
+}
+.informations > p:first-child {
+    margin-bottom:30px;
+}
+.quote {
+    background: linear-gradient(135deg,#8844ee,#b07dfb);
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44,44,44,0.15) ;
+    padding:20px 10px;
+}
+.quote p {
+    text-align: center;
+    color:#fff;
+    margin:0 auto;
+    font-size:2.3rem;
+    max-width: 490px;
+    font-style: italic;
+}
+.quote cite {
+    display:block;
+    margin-top:20px;
+}
+.atributes {
+    align-self: flex-start;
+    border-radius:5px;
+    background: linear-gradient(135deg,#8844ee,#b07dfb);
+    box-shadow: 5px 5px 15px 0px rgba(44,44,44,0.15);
+    padding:30px;
+}
+.atributes li {
+    font-size:1.6rem;
+    font-family: Courier, monospace;
+    color:#fff;
+    padding:15px;
+
+}
+.atributes li+li {
+    border-top: 2px solid #b07dfb;
+} 
+.adverts {
+    grid-area:adverts;
+    padding:30px;
+    background-color:#FAFBFC;
+}
+@media (max-width:1200px) {
+    .adverts {
+        display:flex;
+    }
+    
+    .adverts > .adverts-item:nth-child(1) {
+        margin:0px 20px 0px 0px;
+    }
+}
+.adverts > .adverts-item:nth-child(1) {
+    margin-bottom:30px;
+}
+
+.footer {
+    grid-area:footer;
+    height:80px;
+    background: linear-gradient(135deg,#8844ee,#b07dfb);
+}
+.footer p {
+    color:#fff;
+    padding:30px 0px 0px 0px ;
+    text-align: center;
+    
+}
